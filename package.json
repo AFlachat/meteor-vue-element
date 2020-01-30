@@ -1,0 +1,59 @@
+{
+  "name": "meteor-vue-element",
+  "private": true,
+  "scripts": {
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "start": "meteor run",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.7.7",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "bcrypt": "^3.0.7",
+    "core-js": "^3.4.4",
+    "element-ui": "^2.13.0",
+    "meteor-node-stubs": "^1.0.0",
+    "ts-loader": "^6.2.1",
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.0.0",
+    "vue-loader": "latest",
+    "vue-meteor-tracker": "^2.0.0-beta.5",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-transform-imports": "1.5.0",
+    "css-loader": "^3.4.0",
+    "file-loader": "^5.0.2",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.1",
+    "vue-cli-plugin-i18n": "^0.6.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  }
+}
