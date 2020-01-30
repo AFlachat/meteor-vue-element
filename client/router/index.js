@@ -32,7 +32,7 @@ const routes = [
   },
   {
     path: "*",
-    redirect: "/" + i18n.fallbackLocale
+    redirect: "/" + i18n.locale
   }
 ]
 
