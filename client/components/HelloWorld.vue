@@ -27,6 +27,10 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <h3>i18n</h3>
+    <p>
+      {{ $t('message') }}
+    </p>
     <h3>Meteor</h3>
     <div>
       <div v-if="!$subReady.Time">Loading...</div>

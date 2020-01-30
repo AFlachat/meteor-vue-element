@@ -1,26 +1,44 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-
+import i18n from "../i18n";
+import Home from "../views/Home";
+import Router from "../components/Router"
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+    path: "/:translation",
+    component: Router,
+    beforeEnter(to, from, next) {
+      const translation = to.params.translation;
+      if (i18n.locale !== translation) {
+        i18n.locale = translation;
+      }
+      return next();
+    },
+    children: [
+      {
+        path: "/",
+        name: "home",
+        component: Home
+      },
+      {
+        path: "about",
+        name: "about",
+        component: () =>
+            import("../views/About.vue")
+      }
+    ]
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: "*",
+    redirect: "/" + i18n.fallbackLocale
   }
 ]
 
 const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
   routes: routes
 })
 
