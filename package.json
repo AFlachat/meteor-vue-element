@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "core-js": "^3.4.4",
     "element-ui": "^2.13.0",
     "vue": "^2.6.11",
